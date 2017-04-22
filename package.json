@@ -1,7 +1,7 @@
 {
   "name": "react-browser-rounter",
-  "version": "1.0.1",
-  "description": "A Router wrapper for react-router, it allows you to create multiple Routers share the same history.",
+  "version": "1.0.2",
+  "description": "A Router wrapper for react-router, it allows you to create multiple Routers sharing the same history.",
   "main": "index.js",
   "scripts": {
     "test": "webpack && mocha-phantomjs ./test/index.html"

@@ -1,4 +1,4 @@
-A Router wrapper for react-router, it allows you to create multiple Routers share the same history.
+A Router wrapper for react-router, it allows you to create multiple Routers sharing the same history.
 
 ## Install
 
