@@ -1,5 +1,5 @@
 {
-  "name": "react-browser-rounter",
+  "name": "react-browser-router",
   "version": "1.0.2",
   "description": "A Router wrapper for react-router, it allows you to create multiple Routers sharing the same history.",
   "main": "index.js",
