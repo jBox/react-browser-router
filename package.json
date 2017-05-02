@@ -1,10 +1,10 @@
 {
   "name": "react-browser-router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Router wrapper for react-router, it allows you to create multiple Routers sharing the same history.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel index.js --out-dir lib"
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
