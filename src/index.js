@@ -1,6 +1,6 @@
-import BrowerRouter from "./BrowerRouter";
+import BrowserRouter from "./BrowserRouter";
 import RouteWithSubRoutes from "./Route";
 
 export const Route = RouteWithSubRoutes;
 
-export default BrowerRouter;
+export default BrowserRouter;
