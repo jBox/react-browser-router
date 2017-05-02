@@ -11,14 +11,11 @@ npm install --save react-browser-router
 ```js
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Router, { initHistory } from "react-browser-router";
-import { Route, Link } from "react-router-dom";
+import Router, { Route } from "react-browser-router";
+import { Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Nav from "./components/Nav";
-
-/*init history before any <Router> using.*/
-// initHistory({ options })
 
 class NavComponent extends Component {
     render() {
