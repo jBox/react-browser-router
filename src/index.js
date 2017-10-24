@@ -7,7 +7,8 @@ export {
     Router,
     MemoryRouter,
     StaticRouter,
-    withRouter
+    withRouter,
+    matchPath
 } from "react-router";
 
 export const Route = AdvancedRoute;
