@@ -1,6 +1,15 @@
-import BrowserRouter from "./BrowserRouter";
-import RouteWithSubRoutes from "./Route";
+import AdvancedRoute from "./AdvancedRoute";
+import BrowserHistoryRouter from "./BrowserRouter";
 
-export const Route = RouteWithSubRoutes;
+export { Link, NavLink, HashRouter, Redirect } from "react-router-dom";
+export {
+    Switch,
+    Router,
+    MemoryRouter,
+    StaticRouter,
+    withRouter
+} from "react-router";
 
-export default BrowserRouter;
+export const Route = AdvancedRoute;
+
+export const BrowserRouter = BrowserHistoryRouter;

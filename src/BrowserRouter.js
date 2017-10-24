@@ -6,7 +6,7 @@ import { Router } from "react-router";
 /**
  * Wrap a <Router> using unique HTML5 history.
  */
-export default class BrowserRouter extends Component {
+export default class BrowserHistoryRouter extends Component {
 
     constructor(props, context) {
         super(props, context);

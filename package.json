@@ -1,6 +1,6 @@
 {
   "name": "react-browser-router",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A Router wrapper for react-router, it allows you to create multiple Routers sharing the same history.",
   "main": "lib/index.js",
   "scripts": {
@@ -23,21 +23,20 @@
   "homepage": "https://github.com/jBox/react-browser-router#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "history": "^4.6.1",
-    "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-router": "^4.1.1"
+    "prop-types": "^15.5.8"
   },
   "peerDependencies": {
-    "history": "^4.6.1",
-    "react-router": "^4.1.1"
+    "history": "^4.7.2",
+    "react": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "babel": {
     "presets": [
-      "es2015",
+      "env",
       "stage-2",
       "react"
     ]
