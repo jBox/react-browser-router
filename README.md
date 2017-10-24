@@ -11,33 +11,36 @@ npm install --save react-browser-router
 ```js
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Router, { Route } from "react-browser-router";
-import { Link } from "react-router-dom";
+import { 
+    BrowserRouter, 
+    Route, 
+    Link
+} from "react-browser-router";
 import Home from "./components/Home";
 import About from "./components/About";
 import Nav from "./components/Nav";
 
 class NavComponent extends Component {
     render() {
-        return (<Router>
+        return (<BrowserRouter>
             <div>
                 <Nav />
             </div>
-        </Router>);
+        </BrowserRouter>);
     }
 }
 
 class ViewComponent extends Component {
     render() {
-        return (<Router>
+        return (<BrowserRouter>
             <div>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
 
                 <Route path="/" component={Home} />
-                <Route path="/about" component={About} />
+                <Route path="/about" render=(props) => (<About {...props} />) />
             </div>
-        </Router>);
+        </BrowserRouter>);
     }
 }
 
