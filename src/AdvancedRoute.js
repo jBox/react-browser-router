@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router";
+import StateRoute from "./StateRoute";
 
 const DEFAULT_AUTH = () => ({ verified: true });
 
@@ -22,15 +23,13 @@ export default (route) => {
     // https://reacttraining.com/react-router/web/api/Route/Route-props
     // render props: { match, lacation, history }
     if (route.component) {
-        routeProps.render = (props) => {
-            const auth = authorize(props);
-            if (!auth.verified) {
-                const { location } = props;
-                const redirect = infoRedirect(auth.redirect, location);
-                return (<Redirect {...redirect} />);
-            }
-            return (<route.component {...props} routes={routes} />);
-        };
+        routeProps.render = (props) => (<StateRoute
+            authorize={authorize}
+            location={props.location}
+            component={route.component}
+            componentProps={props}
+            routes={routes}
+        />);
     } else if (route.render) {
         routeProps.render = (props) => {
             const auth = authorize(props);
