@@ -45,14 +45,16 @@ export default class StateRoute extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        const { authorize, componentProps } = nextProps;
-        const authorized = authorize(componentProps);
-        if (isPromise(authorized)) {
-            const doAuthorize = () => authorized.then((auth) => this.updateState({ auth, ready: true }))
-                .catch(() => this.updateState({ verified: false, ready: true }));
-            this.updateState({ ready: false }, doAuthorize);
-        } else {
-            this.updateState({ auth: authorized, ready: true });
+        const { authorize, componentProps, location } = nextProps;
+        if (location !== this.props.location) {
+            const authorized = authorize(componentProps);
+            if (isPromise(authorized)) {
+                const doAuthorize = () => authorized.then((auth) => this.updateState({ auth, ready: true }))
+                    .catch(() => this.updateState({ verified: false, ready: true }));
+                this.updateState({ ready: false }, doAuthorize);
+            } else {
+                this.updateState({ auth: authorized, ready: true });
+            }
         }
     }
 
